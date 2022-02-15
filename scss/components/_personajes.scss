@@ -1,8 +1,11 @@
 // Clases unicas de personajes
 
 /* Dando la misma altura de las imagenes */
+.img-ico{
+    width: 50px;
+    height: 50px;
+}
 
-.img-fix{
-    height: 16rem;
-    max-width: auto;
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    background-color: $color-boton-hover;
 }
