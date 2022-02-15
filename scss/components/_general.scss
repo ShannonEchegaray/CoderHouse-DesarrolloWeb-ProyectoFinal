@@ -3,12 +3,12 @@
 
 /* Css general de la pagina */
 @font-face {
-    font-family: $fuente-8bit;
+    font-family: $fuente-normal;
     src: url(../fuente/8bitOperatorPlus-Regular.ttf);
 }
 
 body{
-    background-color: $color-terciario;
+    background-color: $color-primario;
     color: $color-fuente;
     font-family: $fuente-normal;
     a{
@@ -20,7 +20,7 @@ body{
 
 .header{
     background-color: $color-primario;
-    font-family: $fuente-8bit;
+    border-bottom: 2px solid #fff;
 
     /* Propiedad para ajustar el icono */
     .min-wi{
@@ -30,29 +30,28 @@ body{
     .anchor-header{
         text-decoration: none;
         &:hover{
-            background-color: $color-boton-hover;
-            color: $color-boton-fuente-hover;
+            color: $color-boton-hover;
         }
     }
 
     .anchor-header-title{
         text-decoration: none;
         &:hover{
-            color: $color-fuente;
-            text-shadow: 0 0 4px $color-fuente;
+            color: $color-boton-hover;
+            text-shadow: 0 0 4px $color-boton-hover;
         }
     }
 
 
     .menu-offcanvas{
         background-color: $color-primario;
+        border-right: 5px solid #fff;
     }
 
     .anchor-offcanvas{
         text-decoration: none;
         &:hover{
-            background-color: $color-boton-hover;
-            color: $color-boton-fuente-hover;
+            color: $color-boton-hover;
         }
     }
 }
@@ -68,36 +67,20 @@ body{
     }
 }
 
-// Animacion del header
 
-/*Animacion del header*/
-
-.fluid{
-    animation: fluir 30s ease-in-out infinite;
-    background: linear-gradient(45deg, $gradiente-uno, $gradiente-dos, $gradiente-uno, $gradiente-dos);
-    background-size: 300%;
-}
-
-@keyframes fluir {
-    0%{
-        background-position: 0 50%;
-    }
-    50%{
-        background-position: 50% 50%;
-    }
-    100%{
-        background-position: 100% 50%;
-    }
-}
 
 main{
+
+    section > div{
+        border: 5px solid #fff;
+    }
+
     .main-color{
         background-color: $color-secundario;
     }
 
     .main-anchor:hover{
-        color: $color-fuente;
-        text-shadow: 0 0 5px $color-fuente;
+        color: $color-boton-hover;
     }
 
     .main-anchor-title{
@@ -105,20 +88,35 @@ main{
         text-decoration: none;
 
         &:hover{
-            color: $color-fuente;
-            text-shadow: 0 0 5px $color-fuente
+            color: $color-boton-hover;
         }
     }
 
 }
 
+/* Media querie para que no haya un border left-right cuando este en modo responsive */
+
+@media screen and (max-width: 768px) {
+    main{
+        section:not(.bienvenida){
+            & > div{
+                border-left: none;
+                border-right: none;
+            }
+        }
+    }
+}
+
 footer{
+    border-top: 2px solid #fff;
+    padding-top: 10px;
+
     .main-anchor-title{
-        color: $color-fuente;
+        color: $color-boton;
         text-decoration: none;
         &:hover{
-            color: $color-fuente;
-            text-shadow: 0 0 5px $color-fuente
+            color: $color-boton-hover;
+            text-shadow: 0 0 5px $color-boton-hover
         }
     }
 }

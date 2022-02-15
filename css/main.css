@@ -4,36 +4,35 @@
   src: url(../fuente/8bitOperatorPlus-Regular.ttf); }
 
 body {
-  background-color: #291129;
+  background-color: #000;
   color: #fff;
-  font-family: "Montserrat"; }
+  font-family: "8bitoperator"; }
   body a {
     color: #fff; }
 
 /* header */
 .header {
-  background-color: #0A45C3;
-  font-family: "8bitoperator";
+  background-color: #000;
+  border-bottom: 2px solid #fff;
   /* Propiedad para ajustar el icono */ }
   .header .min-wi {
     min-width: 60px; }
   .header .anchor-header {
     text-decoration: none; }
     .header .anchor-header:hover {
-      background-color: #062B79;
-      color: #eee; }
+      color: #ffff00; }
   .header .anchor-header-title {
     text-decoration: none; }
     .header .anchor-header-title:hover {
-      color: #fff;
-      text-shadow: 0 0 4px #fff; }
+      color: #ffff00;
+      text-shadow: 0 0 4px #ffff00; }
   .header .menu-offcanvas {
-    background-color: #0A45C3; }
+    background-color: #000;
+    border-right: 5px solid #fff; }
   .header .anchor-offcanvas {
     text-decoration: none; }
     .header .anchor-offcanvas:hover {
-      background-color: #062B79;
-      color: #eee; }
+      color: #ffff00; }
 
 /* Media queries */
 /* Media querie para dejar el menu pegado arriba cuando ya este el icono de hamburguesa */
@@ -42,44 +41,36 @@ body {
     position: sticky;
     top: 0; } }
 
-/*Animacion del header*/
-.fluid {
-  animation: fluir 30s ease-in-out infinite;
-  background: linear-gradient(45deg, #0A45C3, #7491F6, #0A45C3, #7491F6);
-  background-size: 300%; }
-
-@keyframes fluir {
-  0% {
-    background-position: 0 50%; }
-  50% {
-    background-position: 50% 50%; }
-  100% {
-    background-position: 100% 50%; } }
+main section > div {
+  border: 5px solid #fff; }
 
 main .main-color {
-  background-color: #7491F6; }
+  background-color: #291129; }
 
 main .main-anchor:hover {
-  color: #fff;
-  text-shadow: 0 0 5px #fff; }
+  color: #ffff00; }
 
 main .main-anchor-title {
   color: #fff;
   text-decoration: none; }
   main .main-anchor-title:hover {
-    color: #fff;
-    text-shadow: 0 0 5px #fff; }
+    color: #ffff00; }
 
-footer .main-anchor-title {
-  color: #fff;
-  text-decoration: none; }
-  footer .main-anchor-title:hover {
-    color: #fff;
-    text-shadow: 0 0 5px #fff; }
+/* Media querie para que no haya un border left-right cuando este en modo responsive */
+@media screen and (max-width: 768px) {
+  main section:not(.bienvenida) > div {
+    border-left: none;
+    border-right: none; } }
 
-/* Fuente especial a la el cartel de bienvenida */
-.bienvenida {
-  font-family: "8bitoperator"; }
+footer {
+  border-top: 2px solid #fff;
+  padding-top: 10px; }
+  footer .main-anchor-title {
+    color: #fff;
+    text-decoration: none; }
+    footer .main-anchor-title:hover {
+      color: #ffff00;
+      text-shadow: 0 0 5px #ffff00; }
 
 /* Animaciones del main de index */
 .glowing {
