@@ -8300,7 +8300,8 @@ textarea.form-control-lg {
 body {
   background-color: #000;
   color: #fff;
-  font-family: "8bitoperator"; }
+  font-family: "8bitoperator";
+  scroll-behavior: smooth; }
   body a {
     color: #fff; }
 
