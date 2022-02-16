@@ -8328,6 +8328,20 @@ body {
     text-decoration: none; }
     .header .anchor-offcanvas:hover {
       color: #ffff00; }
+  .header .header-prueba {
+    position: relative; }
+    .header .header-prueba::before {
+      visibility: hidden;
+      content: "";
+      width: 25px;
+      height: 25px;
+      background-image: url(../img/Corazon.png);
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      left: -15px; }
+    .header .header-prueba:hover::before {
+      visibility: visible; }
 
 /* Media queries */
 /* Media querie para dejar el menu pegado arriba cuando ya este el icono de hamburguesa */

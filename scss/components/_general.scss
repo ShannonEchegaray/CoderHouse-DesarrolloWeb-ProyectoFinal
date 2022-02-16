@@ -55,6 +55,24 @@ body{
             color: $color-boton-hover;
         }
     }
+
+    .header-prueba{
+        position: relative;
+        &::before{
+            visibility: hidden;
+            content: "";
+            width: 25px;
+            height: 25px;
+            background-image: url(../img/Corazon.png);
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            left: -15px;
+        }
+        &:hover::before{
+            visibility: visible;
+        }
+    }
 }
 
 /* Media queries */
