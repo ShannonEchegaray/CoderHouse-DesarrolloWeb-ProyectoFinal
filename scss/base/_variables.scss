@@ -1,3 +1,13 @@
+// Breakpoints
+
+$breakpoints: (
+    small : 576px,
+    medium : 768px,
+    large : 992px,
+    extralarge : 1200px,
+    extraextralarge : 1400px
+);
+
 // Colores pagina
 
 $color-primario: #000;

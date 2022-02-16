@@ -1,3 +1,5 @@
+@import "mixins";
+
 // css general de la pagina
 
 
@@ -29,18 +31,11 @@ body{
     }
 
     .anchor-header{
-        text-decoration: none;
-        &:hover{
-            color: $color-boton-hover;
-        }
+        @include enlace-b(none);
     }
 
     .anchor-header-title{
-        text-decoration: none;
-        &:hover{
-            color: $color-boton-hover;
-            text-shadow: 0 0 4px $color-boton-hover;
-        }
+        @include enlace-b(none);
     }
 
 
@@ -50,13 +45,10 @@ body{
     }
 
     .anchor-offcanvas{
-        text-decoration: none;
-        &:hover{
-            color: $color-boton-hover;
-        }
+        @include enlace-b(none);
     }
 
-    .header-prueba{
+    .header-corazon{
         position: relative;
         &::before{
             visibility: hidden;
@@ -73,20 +65,25 @@ body{
             visibility: visible;
         }
     }
-}
 
-/* Media queries */
+    .is-selected{
+        position: relative;
+    }
 
-/* Media querie para dejar el menu pegado arriba cuando ya este el icono de hamburguesa */
-@media screen and (max-width: 992px){
+    .is-selected::before{
+        position: absolute;
+        content: ">";
+        animation: select 2s steps(2) infinite;
+    }
 
-    .sticky-menu{
-        position: sticky;
-        top: 0;
+    .is-selected-non-title{
+        @extend .is-selected;
+    }
+
+    .is-selected-non-title::before{
+        animation: select-menu 2s steps(2) infinite;
     }
 }
-
-
 
 main{
 
@@ -98,32 +95,14 @@ main{
         background-color: $color-secundario;
     }
 
-    .main-anchor:hover{
-        color: $color-boton-hover;
+    .main-anchor{
+        @include enlace-a(underline);
     }
 
     .main-anchor-title{
-        color: $color-fuente;
-        text-decoration: none;
-
-        &:hover{
-            color: $color-boton-hover;
-        }
+        @include enlace-a(none);
     }
 
-}
-
-/* Media querie para que no haya un border left-right cuando este en modo responsive */
-
-@media screen and (max-width: 768px) {
-    main{
-        section:not(.bienvenida){
-            & > div{
-                border-left: none;
-                border-right: none;
-            }
-        }
-    }
 }
 
 footer{
@@ -131,11 +110,6 @@ footer{
     padding-top: 10px;
 
     .main-anchor-title{
-        color: $color-boton;
-        text-decoration: none;
-        &:hover{
-            color: $color-boton-hover;
-            text-shadow: 0 0 5px $color-boton-hover
-        }
+        @include enlace-b(none);
     }
 }

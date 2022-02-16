@@ -8315,7 +8315,8 @@ body {
   .header .anchor-header {
     text-decoration: none; }
     .header .anchor-header:hover {
-      color: #ffff00; }
+      color: #ffff00;
+      text-shadow: 0 0 4px #ffff00; }
   .header .anchor-header-title {
     text-decoration: none; }
     .header .anchor-header-title:hover {
@@ -8327,10 +8328,11 @@ body {
   .header .anchor-offcanvas {
     text-decoration: none; }
     .header .anchor-offcanvas:hover {
-      color: #ffff00; }
-  .header .header-prueba {
+      color: #ffff00;
+      text-shadow: 0 0 4px #ffff00; }
+  .header .header-corazon {
     position: relative; }
-    .header .header-prueba::before {
+    .header .header-corazon::before {
       visibility: hidden;
       content: "";
       width: 25px;
@@ -8340,15 +8342,16 @@ body {
       background-size: cover;
       position: absolute;
       left: -15px; }
-    .header .header-prueba:hover::before {
+    .header .header-corazon:hover::before {
       visibility: visible; }
-
-/* Media queries */
-/* Media querie para dejar el menu pegado arriba cuando ya este el icono de hamburguesa */
-@media screen and (max-width: 992px) {
-  .sticky-menu {
-    position: sticky;
-    top: 0; } }
+  .header .is-selected, .header .is-selected-non-title {
+    position: relative; }
+  .header .is-selected::before, .header .is-selected-non-title::before {
+    position: absolute;
+    content: ">";
+    animation: select 2s steps(2) infinite; }
+  .header .is-selected-non-title::before {
+    animation: select-menu 2s steps(2) infinite; }
 
 main section > div {
   border: 5px solid #fff; }
@@ -8356,30 +8359,24 @@ main section > div {
 main .main-color {
   background-color: #291129; }
 
-main .main-anchor:hover {
-  color: #ffff00; }
+main .main-anchor {
+  text-decoration: underline; }
+  main .main-anchor:hover {
+    color: #ffff00; }
 
 main .main-anchor-title {
-  color: #fff;
   text-decoration: none; }
   main .main-anchor-title:hover {
     color: #ffff00; }
-
-/* Media querie para que no haya un border left-right cuando este en modo responsive */
-@media screen and (max-width: 768px) {
-  main section:not(.bienvenida) > div {
-    border-left: none;
-    border-right: none; } }
 
 footer {
   border-top: 2px solid #fff;
   padding-top: 10px; }
   footer .main-anchor-title {
-    color: #fff;
     text-decoration: none; }
     footer .main-anchor-title:hover {
       color: #ffff00;
-      text-shadow: 0 0 5px #ffff00; }
+      text-shadow: 0 0 4px #ffff00; }
 
 /* Animaciones del main de index */
 .glowing {
@@ -8393,5 +8390,33 @@ footer {
   width: 50px;
   height: 50px; }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
   background-color: #ffff00; }
+
+/* Animaciones */
+@keyframes select {
+  0% {
+    left: -20px; }
+  100% {
+    left: -15px; } }
+
+@keyframes select-menu {
+  0% {
+    left: -7px; }
+  100% {
+    left: -3px; } }
+
+/* Media queries */
+/* Media querie para dejar el menu pegado arriba cuando ya este el icono de hamburguesa */
+@media screen and (max-width: 992px) {
+  .sticky-menu {
+    position: sticky;
+    top: 0;
+    z-index: 1; } }
+
+/* Media querie para que no haya un border left-right cuando este en modo responsive */
+@media screen and (max-width: 768px) {
+  main section:not(.bienvenida) > div {
+    border-left: none;
+    border-right: none; } }
