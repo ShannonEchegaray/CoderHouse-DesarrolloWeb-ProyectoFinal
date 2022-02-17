@@ -19,9 +19,19 @@ body{
     scroll-behavior: smooth;
 }
 
+/* Layout */
+
+.layout{
+    display: grid;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+}
+
 /* header */
 
 .header{
+    grid-area: header;
     background-color: $color-primario;
     border-bottom: 2px solid #fff;
 
@@ -85,7 +95,11 @@ body{
     }
 }
 
-main{
+/* Main */
+
+.main{
+
+    grid-area: main;
 
     section > div{
         border: 5px solid #fff;
@@ -105,11 +119,22 @@ main{
 
 }
 
+/* Footer */
+
 footer{
+
+    grid-area: footer;
     border-top: 2px solid #fff;
     padding-top: 10px;
 
     .main-anchor-title{
         @include enlace-b(none);
     }
+}
+
+/*Imagenes*/
+
+.imagenes-fix{
+    width: 100%;
+    height: auto;
 }
