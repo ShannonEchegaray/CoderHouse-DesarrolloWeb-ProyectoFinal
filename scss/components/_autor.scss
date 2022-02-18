@@ -1,0 +1,51 @@
+// Etiquetas unicas de la seccion Autor
+
+.main{
+    .autor-section{
+        @include separador;
+        padding: 24px;
+
+        .autor-section__parrafo{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            padding: 0 10px;
+
+            .autor-section__imagen{
+                @include tamaño(medium);
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .undertale-section{
+        @include separador;
+        padding: 24px;
+        display: flex;
+        flex-flow: column nowrap;
+
+        .undertale-section__parrafo{
+            padding: 0 10px;
+        }
+        .undertale-section__imagen{
+            @include tamaño(max);
+            margin-bottom: 20px;
+        }
+    }
+
+    .legado-section{
+        @include separador;
+        padding: 24px;
+        display: flex;
+        flex-flow: column nowrap;
+
+        .legado-section__parrafo{
+            padding: 0 10px;
+        }
+        .legado-section__lista{
+            @include tamaño(max);
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

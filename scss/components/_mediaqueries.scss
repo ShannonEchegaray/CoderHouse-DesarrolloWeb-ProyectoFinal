@@ -266,8 +266,21 @@
 
         // Soundtrack
 
-        .soundtrack-section__parrafo{
-         @include tamaño(xlarge);
+        .soundtrack-section, .comunidad-section{
+            .soundtrack-section__parrafo, .comunidad-section__parrafo{
+                @include tamaño(xlarge);
+                flex-flow: column nowrap;
+                align-items: center
+            }
+            .soundtrack-section__lista, .comunidad-section__lista{
+                @include tamaño(xlarge);
+                flex-flow: column nowrap;
+                align-items: center;
+    
+                div{
+                    @include tamaño(max);
+                }
+            }
         }
     }
 }
@@ -359,6 +372,26 @@
                 align-items: center;
                 margin-bottom: 20px;
                 margin: 0 30px;
+            }
+        }
+
+        // soundtrack
+
+        .soundtrack-section, .comunidad-section{
+            .soundtrack-section__parrafo, .comunidad-section__parrafo{
+                @include tamaño(max);
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+            }
+            .soundtrack-section__lista, .comunidad-section__lista{
+                @include tamaño(xlarge);
+                flex-flow: column nowrap;
+                align-items: center;
+    
+                div{
+                    @include tamaño(max);
+                }
             }
         }
     }
@@ -453,6 +486,26 @@
                 align-items: center;
                 margin-bottom: 20px;
                 margin: 0 30px;
+            }
+        }
+
+        // Soundtrack
+
+        .soundtrack-section, .comunidad-section{
+            .soundtrack-section__parrafo, .comunidad-section__parrafo{
+                @include tamaño(max);
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+            }
+            .soundtrack-section__lista, .comunidad-section__lista{
+                @include tamaño(xlarge);
+                flex-flow: column nowrap;
+                align-items: center;
+    
+                div{
+                    @include tamaño(max);
+                }
             }
         }
     }
