@@ -1,4 +1,4 @@
-@import "mixins";
+@import "./mixins";
 
 // css general de la pagina
 
@@ -26,6 +26,7 @@ body{
     grid-template-areas: "header"
                          "main"
                          "footer";
+    position: relative;
 }
 
 /* header */
@@ -35,9 +36,49 @@ body{
     background-color: $color-primario;
     border-bottom: 2px solid #fff;
 
-    /* Propiedad para ajustar el icono */
-    .min-wi{
-        min-width: 60px;
+    .logo_container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+
+        .logo_container__menu{
+            display: none;
+        }
+
+        .logo_container__logo{
+            min-width: 45px;
+            width: 5%;
+        }
+        .logo_container__titulo{
+            margin: 0 auto;
+        }
+    }
+
+    .menu-offcanvas{
+        background-color: $color-primario;
+        border-right: 5px solid #fff;
+        .offcanvas-title{
+            margin: 0 auto;
+        }
+        .menu-offcanvas__enlace{
+            @include enlace-b(none);
+            margin: 10px 20px;
+        }
+    }
+
+    .nav_container{
+        width: 100%;
+        .nav_container__lista{
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+            margin-bottom: 10px;
+            li{
+                padding: 0 5px;
+            }
+        }
     }
 
     .anchor-header{
@@ -45,16 +86,6 @@ body{
     }
 
     .anchor-header-title{
-        @include enlace-b(none);
-    }
-
-
-    .menu-offcanvas{
-        background-color: $color-primario;
-        border-right: 5px solid #fff;
-    }
-
-    .anchor-offcanvas{
         @include enlace-b(none);
     }
 
@@ -69,7 +100,7 @@ body{
             background-position: center;
             background-size: cover;
             position: absolute;
-            left: -15px;
+            left: -30px;
         }
         &:hover::before{
             visibility: visible;
@@ -101,6 +132,7 @@ body{
 
     grid-area: main;
 
+    margin-bottom: 200px;
     section > div{
         border: 5px solid #fff;
     }
@@ -121,11 +153,14 @@ body{
 
 /* Footer */
 
-footer{
+.footer{
 
     grid-area: footer;
     border-top: 2px solid #fff;
     padding-top: 10px;
+
+    position: absolute;
+    bottom: 0;
 
     .main-anchor-title{
         @include enlace-b(none);
@@ -137,4 +172,15 @@ footer{
 .imagenes-fix{
     width: 100%;
     height: auto;
+}
+
+/* Listas */
+
+.non-list{
+    list-style-type: none;
+}
+
+.lista-horizontal{
+    @extend .non-list;
+    display: inline-block;
 }

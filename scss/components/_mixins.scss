@@ -1,8 +1,14 @@
 // Mixins
 
-@mixin media-q($breakpoint) {
+@mixin media-q-max($breakpoint) {
     @media screen and (max-width: map-get($breakpoints, $breakpoint)){
-        @content
+        @content;
+    }
+}
+
+@mixin media-q-min($breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)){
+        @content;
     }
 }
 

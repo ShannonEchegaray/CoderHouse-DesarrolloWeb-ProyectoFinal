@@ -8305,13 +8305,50 @@ body {
   body a {
     color: #fff; }
 
+/* Layout */
+.layout {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  position: relative; }
+
 /* header */
 .header {
+  grid-area: header;
   background-color: #000;
-  border-bottom: 2px solid #fff;
-  /* Propiedad para ajustar el icono */ }
-  .header .min-wi {
-    min-width: 60px; }
+  border-bottom: 2px solid #fff; }
+  .header .logo_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px; }
+    .header .logo_container .logo_container__menu {
+      display: none; }
+    .header .logo_container .logo_container__logo {
+      min-width: 45px;
+      width: 5%; }
+    .header .logo_container .logo_container__titulo {
+      margin: 0 auto; }
+  .header .menu-offcanvas {
+    background-color: #000;
+    border-right: 5px solid #fff; }
+    .header .menu-offcanvas .offcanvas-title {
+      margin: 0 auto; }
+    .header .menu-offcanvas .menu-offcanvas__enlace {
+      text-decoration: none;
+      margin: 10px 20px; }
+      .header .menu-offcanvas .menu-offcanvas__enlace:hover {
+        color: #ffff00;
+        text-shadow: 0 0 4px #ffff00; }
+  .header .nav_container {
+    width: 100%; }
+    .header .nav_container .nav_container__lista {
+      display: flex;
+      justify-content: space-around;
+      padding: 0;
+      margin-bottom: 10px; }
+      .header .nav_container .nav_container__lista li {
+        padding: 0 5px; }
   .header .anchor-header {
     text-decoration: none; }
     .header .anchor-header:hover {
@@ -8320,14 +8357,6 @@ body {
   .header .anchor-header-title {
     text-decoration: none; }
     .header .anchor-header-title:hover {
-      color: #ffff00;
-      text-shadow: 0 0 4px #ffff00; }
-  .header .menu-offcanvas {
-    background-color: #000;
-    border-right: 5px solid #fff; }
-  .header .anchor-offcanvas {
-    text-decoration: none; }
-    .header .anchor-offcanvas:hover {
       color: #ffff00;
       text-shadow: 0 0 4px #ffff00; }
   .header .header-corazon {
@@ -8341,7 +8370,7 @@ body {
       background-position: center;
       background-size: cover;
       position: absolute;
-      left: -15px; }
+      left: -30px; }
     .header .header-corazon:hover::before {
       visibility: visible; }
   .header .is-selected, .header .is-selected-non-title {
@@ -8353,30 +8382,47 @@ body {
   .header .is-selected-non-title::before {
     animation: select-menu 2s steps(2) infinite; }
 
-main section > div {
-  border: 5px solid #fff; }
-
-main .main-color {
-  background-color: #291129; }
-
-main .main-anchor {
-  text-decoration: underline; }
-  main .main-anchor:hover {
-    color: #ffff00; }
-
-main .main-anchor-title {
-  text-decoration: none; }
-  main .main-anchor-title:hover {
-    color: #ffff00; }
-
-footer {
-  border-top: 2px solid #fff;
-  padding-top: 10px; }
-  footer .main-anchor-title {
+/* Main */
+.main {
+  grid-area: main;
+  margin-bottom: 200px; }
+  .main section > div {
+    border: 5px solid #fff; }
+  .main .main-color {
+    background-color: #291129; }
+  .main .main-anchor {
+    text-decoration: underline; }
+    .main .main-anchor:hover {
+      color: #ffff00; }
+  .main .main-anchor-title {
     text-decoration: none; }
-    footer .main-anchor-title:hover {
+    .main .main-anchor-title:hover {
+      color: #ffff00; }
+
+/* Footer */
+.footer {
+  grid-area: footer;
+  border-top: 2px solid #fff;
+  padding-top: 10px;
+  position: absolute;
+  bottom: 0; }
+  .footer .main-anchor-title {
+    text-decoration: none; }
+    .footer .main-anchor-title:hover {
       color: #ffff00;
       text-shadow: 0 0 4px #ffff00; }
+
+/*Imagenes*/
+.imagenes-fix {
+  width: 100%;
+  height: auto; }
+
+/* Listas */
+.non-list, .lista-horizontal {
+  list-style-type: none; }
+
+.lista-horizontal {
+  display: inline-block; }
 
 /* Animaciones del main de index */
 .glowing {
@@ -8413,7 +8459,13 @@ footer {
   .sticky-menu {
     position: sticky;
     top: 0;
-    z-index: 1; } }
+    z-index: 1; }
+  .nav_container {
+    display: none; } }
+
+@media screen and (min-width: 992px) {
+  .logo_container__logo {
+    display: none; } }
 
 /* Media querie para que no haya un border left-right cuando este en modo responsive */
 @media screen and (max-width: 768px) {
