@@ -64,7 +64,8 @@ body{
         }
         .menu-offcanvas__enlace{
             @include enlace-b(none);
-            margin: 10px 20px;
+            margin: 10px 0 10px 40px;
+            display: block;
         }
     }
 
@@ -131,8 +132,11 @@ body{
 .main{
 
     grid-area: main;
-
+    min-height: 100vh;
     margin-bottom: 200px;
+
+    
+
     section > div{
         border: 5px solid #fff;
     }
@@ -149,6 +153,8 @@ body{
         @include enlace-a(none);
     }
 
+
+
 }
 
 /* Footer */
@@ -162,6 +168,13 @@ body{
     position: absolute;
     bottom: 0;
 
+    width: 100%;
+
+    .footer__lista{
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 10px;
+    }
     .main-anchor-title{
         @include enlace-b(none);
     }
@@ -178,9 +191,15 @@ body{
 
 .non-list{
     list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
 }
 
 .lista-horizontal{
     @extend .non-list;
     display: inline-block;
+}
+
+.centrar-texto{
+    text-align: center;
 }

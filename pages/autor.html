@@ -20,61 +20,62 @@
 
     <div class="layout">
         <!-- Comienzo Header -->
-        
-        <header class="" id="home">
+        <header class="header sticky-menu" id="home">
             <!-- Logo -->
-            <div class="">
-                <div class="">
-                    <a href="#offcanvas" data-bs-toggle="offcanvas">
-                        <img src="../img/Hamburger.png" alt="Icono de menu" class="">
-                    </a>
-                </div>
-                <!-- offcanvas, menu responsive -->
-        
-                <div class="" tabindex="-1" id="offcanvas">
-                    <div class="">
-                    <h3 class="" id="offcanvasExampleLabel">DELTARUNE</h3>
-                    <button type="button" class="" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="">
-                        <ul class="">
-                            <li class=""><a class="" href="acerca-de.html">Acerca de</a></li>
-                            <li class=""><a class="" href="personajes.html">Personajes</a></li>
-                            <li class=""><a class="" href="soundtrack.html">Soundtrack</a></li>
-                            <li class=""><a class="" href="#autor">Autor</a></li>
-                        </ul>  
-                    </div>
-                </div>
-                <!-- Fin de Offcanvas -->
-        
-                <h1 class="">
-                    <a href="../index.html" class="">DELTARUNE</a>
-                </h1>
-            </div>
-            <!--Menu-->
             <nav class="">
-                <ul class="">
-                    <li class="">
-                        <a href="acerca-de.html" class="">ACERCA DE</a>
-                    </li>
-                    <li class="">
-                        <a href="personajes.html" class="">PERSONAJES</a>
-                    </li>
-                    <li class="">
-                        <a href="soundtrack.html" class="">SOUNDTRACK</a>
-                    </li>
-                    <li class="">
-                        <a href="#autor" class="">AUTOR</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- Fin Menu -->
+                <div class="logo_container">
+                    <div class="logo_container__logo">
+                        <a href="#offcanvas" data-bs-toggle="offcanvas">
+                            <img src="../img/Hamburger.png" alt="Icono de menu" class="imagenes-fix">
+                        </a>
+                    </div>
+                    <!-- offcanvas, menu responsive -->
+                
+                    <div class="offcanvas offcanvas-start menu-offcanvas" tabindex="-1" id="offcanvas">
+                        <div class="offcanvas-header">
+                          <h4 class="offcanvas-title" id="offcanvasExampleLabel">
+                              <a href="../index.html" class="anchor-header-title">DELTARUNE</a>
+                            </h4>
+                          <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="">
+                            <ul class="non-list">
+                                <li class=""><a class="menu-offcanvas__enlace header-corazon" href="acerca-de.html">Acerca de</a></li>
+                                <li class=""><a class="menu-offcanvas__enlace header-corazon" href="personajes.html">Personajes</a></li>
+                                <li class=""><a class="menu-offcanvas__enlace header-corazon" href="soundtrack.html">Soundtrack</a></li>
+                                <li class=""><a class="menu-offcanvas__enlace is-selected" href="#autor">Autor</a></li>
+                            </ul>  
+                        </div>
+                    </div>
+                      <!-- Fin de Offcanvas -->
+                
+                    <h1 class="logo_container__titulo">
+                        <a href="../index.html" class="anchor-header-title">DELTARUNE</a>
+                    </h1>
+                </div>
+                <!--Menu-->
+                <div class="nav_container">
+                    <ul class="nav_container__lista non-list reset">
+                        <li class="lista-horizontal">
+                            <a href="acerca-de.html" class="anchor-header header-corazon">ACERCA DE</a>
+                        </li>
+                        <li class="lista-horizontal">
+                            <a href="personajes.html" class="anchor-header header-corazon">PERSONAJES</a>
+                        </li>
+                        <li class="lista-horizontal">
+                            <a href="soundtrack.html" class="anchor-header header-corazon">SOUNDTRACK</a>
+                        </li>
+                        <li class="lista-horizontal">
+                            <a href="#autor" class="anchor-header is-selected">AUTOR</a>
+                        </li>
+                    </ul>
+                </div>
+            <nav>
         </header>
-        
         <!-- Fin Header -->
         <!-- Comienzo Main -->
         
-        <main class="">
+        <main class="main">
             <!--Autor-->
             <section class="">
                 <div class="">
@@ -124,32 +125,31 @@
         </main>
         
         <!-- Fin Main -->
-        <!-- Comienzo Footer -->
-        
-        <footer class="">
+        <!-- Comienzo Footer  -->
+    
+        <footer class="footer">
             <div class="">
-                <ul class="">
-                    <li class="">
-                        <a href="../index.html" class="">HOME</a>
+                <ul class="non-list footer__lista">
+                    <li class="lista-horizontal">
+                        <a href="#home" class="">HOME</a>
                     </li>
-                    <li class="">
-                        <a href="acerca-de.html" class="">ACERCA DE</a>
+                    <li class="lista-horizontal">
+                        <a href="pages/acerca-de.html" class="">ACERCA DE</a>
                     </li>
-                    <li class="">
-                        <a href="personajes.html" class="">PERSONAJES</a>
+                    <li class="lista-horizontal">
+                        <a href="pages/personajes.html" class="">PERSONAJES</a>
                     </li>
-                    <li class="">
-                        <a href="soundtrack.html" class="">SOUNDTRACK</a>
+                    <li class="lista-horizontal">
+                        <a href="pages/soundtrack.html" class="">SOUNDTRACK</a>
                     </li>
-                    <li class="">
-                        <a href="#autor" class="">AUTOR</a>
+                    <li class="lista-horizontal">
+                        <a href="pages/autor.html" class="">AUTOR</a>
                     </li>
                 </ul>
             </div>
-            <h5 class="">Derechos reservados. Hecho por Shannon Echegaray</h5>
-            </footer>
-        
-            <!-- Fin Footer -->
+            <h5 class="centrar-texto">Derechos reservados. Hecho por Shannon Echegaray</h5>
+        </footer>
+    <!-- Fin Footer -->
         
     </div>
     <!-- Scripts -->
