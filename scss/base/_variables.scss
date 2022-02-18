@@ -8,6 +8,14 @@ $breakpoints: (
     extraextralarge : 1400px
 );
 
+$contenedores-tamaños:(
+    small : 33%,
+    medium : 50%,
+    large : 66%,
+    xlarge : 83%,
+    max : 100%
+);
+
 // Colores pagina
 
 $color-primario: #000;

@@ -8387,7 +8387,12 @@ body {
 .main {
   grid-area: main;
   min-height: 100vh;
-  margin-bottom: 200px; }
+  margin-bottom: 200px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center; }
+  .main section {
+    width: 80%; }
   .main section > div {
     border: 5px solid #fff; }
   .main .main-color {
@@ -8400,6 +8405,22 @@ body {
     text-decoration: none; }
     .main .main-anchor-title:hover {
       color: #ffff00; }
+  .main .acercade {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    padding: 24px; }
+    .main .acercade .acerca-de__parrafo {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      padding: 0 10px;
+      width: 33%; }
+    .main .acercade .acerca-de__imagen {
+      padding: 0 10px;
+      width: 33%;
+      display: flex;
+      align-items: center; }
 
 /* Footer */
 .footer {
@@ -8465,7 +8486,7 @@ body {
   100% {
     left: -3px; } }
 
-/* Media queries */
+/* Media queries especiales */
 /* Media querie para dejar el menu pegado arriba cuando ya este el icono de hamburguesa */
 @media screen and (max-width: 992px) {
   .sticky-menu {
@@ -8484,3 +8505,19 @@ body {
   main section:not(.bienvenida) > div {
     border-left: none;
     border-right: none; } }
+
+/* Breakpoints Mobile */
+@media screen and (max-width: 1400px) and (min-width: 1200px) {
+  .main .acercade .acerca-de__parrafo {
+    width: 50%; }
+  .main .acercade .acerca-de__imagen {
+    width: 50%; } }
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .main .acercade {
+    flex-flow: column;
+    align-items: center; }
+    .main .acercade .acerca-de__parrafo {
+      width: 83%; }
+    .main .acercade .acerca-de__imagen {
+      width: 83%; } }

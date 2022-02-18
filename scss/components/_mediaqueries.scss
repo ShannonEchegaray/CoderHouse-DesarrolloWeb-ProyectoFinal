@@ -1,6 +1,6 @@
 // Media queries
 
-/* Media queries */
+/* Media queries especiales */
 
 /* Media querie para dejar el menu pegado arriba cuando ya este el icono de hamburguesa */
 @include media-q-max(large){
@@ -22,7 +22,6 @@
 }
 
 
-
 /* Media querie para que no haya un border left-right cuando este en modo responsive */
 
 @include media-q-max(medium){
@@ -34,4 +33,45 @@
             }
         }
     }
+}
+
+/* Breakpoints Mobile */
+
+@include media-max-min(extraextralarge, extralarge){
+    .main{
+        .acercade{
+            .acerca-de__parrafo{
+                width: map-get($contenedores-tamaños, medium);
+            }
+            .acerca-de__imagen{
+                width: map-get($contenedores-tamaños, medium);
+            }
+        }
+    }
+}
+
+@include media-max-min(extralarge, large){
+
+}
+
+@include media-max-min(large, medium){
+
+    .main{
+        .acercade{
+            flex-flow: column;
+            align-items: center;
+
+            .acerca-de__parrafo{
+                width: map-get($contenedores-tamaños, xlarge); 
+            }
+
+            .acerca-de__imagen{
+                width: map-get($contenedores-tamaños, xlarge);
+            }
+        }
+    }
+}
+
+@include media-max-min(medium, small){
+    
 }

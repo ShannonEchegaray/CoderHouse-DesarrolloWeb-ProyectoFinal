@@ -12,6 +12,12 @@
     }
 }
 
+@mixin media-max-min($breakpoint-max, $breakpoint-min){
+    @media screen and (max-width: map-get($breakpoints, $breakpoint-max)) and (min-width: map-get($breakpoints, $breakpoint-min)){
+        @content;
+    }
+}
+
 @mixin enlace-a($has-underscore){
     text-decoration: $has-underscore;
     &:hover{
