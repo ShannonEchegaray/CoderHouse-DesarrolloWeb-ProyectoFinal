@@ -8536,14 +8536,71 @@ body {
   .main .mecanica-section .mecanica-section__imagen div {
     margin: 10px; }
 
-/* Dando la misma altura de las imagenes */
-.img-ico {
-  width: 50px;
-  height: 50px; }
+.main {
+  /* Dando la misma altura de las imagenes */ }
+  .main .personajes-section {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 24px; }
+  .main .personajes-section__tabs {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center; }
+    .main .personajes-section__tabs .personajes-section__con-botones {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center; }
+      .main .personajes-section__tabs .personajes-section__con-botones .personajes-section__botones {
+        padding: 0;
+        margin: 12px; }
+    .main .personajes-section__tabs .personajes-section__tab-pane {
+      width: 83%; }
+      .main .personajes-section__tabs .personajes-section__tab-pane .personajes-section__pj-container {
+        display: grid;
+        grid-template-areas: "separador titulo" "imagen parrafo";
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 4fr;
+        align-items: center;
+        justify-items: center; }
+    .main .personajes-section__tabs .personajes-section__separador {
+      grid-area: separador; }
+    .main .personajes-section__tabs .personajes-section__parrafo {
+      grid-area: parrafo;
+      align-items: center;
+      margin: 0 20px;
+      padding: 20px; }
+    .main .personajes-section__tabs .personajes-section__titulo {
+      grid-area: titulo;
+      align-items: center; }
+    .main .personajes-section__tabs .personajes-section__imagen {
+      grid-area: imagen;
+      width: 50%;
+      margin-bottom: 20px;
+      margin: 0 30px; }
+  .main .img-ico {
+    width: 50px;
+    height: 50px; }
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   background-color: #ffff00; }
+
+.main .soundtrack-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 24px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center; }
+  .main .soundtrack-section .soundtrack-section__parrafo {
+    width: 66%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 0 10px; }
 
 /* Animaciones */
 @keyframes select {
@@ -8566,7 +8623,11 @@ body {
     top: 0;
     z-index: 1; }
   .nav_container {
-    display: none; } }
+    display: none; }
+  .footer {
+    padding-top: 15px; }
+    .footer div {
+      display: none; } }
 
 @media screen and (min-width: 992px) {
   .logo_container__logo {
@@ -8587,7 +8648,23 @@ body {
   .main .acercade .acerca-de__imagen, .main .personajes .acerca-de__imagen, .main .personajes .personajes__iamgen, .main .personajes .personajes__imagen {
     width: 50%; }
   .main .acercade-section .acercade-section__imagen {
-    width: 50%; } }
+    width: 50%; }
+  .main .personajes-section__tab-pane {
+    width: 100%; }
+    .main .personajes-section__tab-pane .personajes-section__pj-container {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center; }
+  .main .personajes-section__separador {
+    display: none; }
+  .main .personajes-section__parrafo {
+    margin: 0 20px;
+    padding: 20px; }
+  .main .personajes-section__imagen {
+    display: flex;
+    margin-bottom: 20px;
+    margin: 0 30px; } }
 
 @media screen and (max-width: 1200px) and (min-width: 992px) {
   .main .bienvenida .bienvenida__imagen {
@@ -8597,7 +8674,28 @@ body {
   .main .acercade .acerca-de__imagen, .main .personajes .acerca-de__imagen, .main .personajes .personajes__iamgen, .main .personajes .personajes__imagen {
     width: 50%; }
   .main .acercade-section-section .acercade__imagen {
-    width: 50%; } }
+    width: 50%; }
+  .main .personajes-section__tabs .personajes-section__tab-pane {
+    width: 100%; }
+    .main .personajes-section__tabs .personajes-section__tab-pane .personajes-section__pj-container {
+      display: flex;
+      flex-flow: column nowrap;
+      grid-template-rows: 1fr 4fr;
+      justify-content: center;
+      align-items: center; }
+  .main .personajes-section__tabs .personajes-section__separador {
+    display: none; }
+  .main .personajes-section__tabs .personajes-section__parrafo {
+    margin: 20px 0;
+    padding: 0;
+    width: 66%; }
+  .main .personajes-section__tabs .personajes-section__imagen {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin: 0 30px; } }
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
   .main section:not(.bienvenida) {
@@ -8612,7 +8710,30 @@ body {
     .main .acercade .acerca-de__imagen, .main .personajes .acerca-de__imagen, .main .personajes .personajes__iamgen, .main .personajes .personajes__imagen {
       width: 66%; }
   .main .acercade-section .acercade-section__imagen {
-    width: 50%; } }
+    width: 50%; }
+  .main .personajes-section__tabs .personajes-section__tab-pane {
+    width: 100%; }
+    .main .personajes-section__tabs .personajes-section__tab-pane .personajes-section__pj-container {
+      display: flex;
+      flex-flow: column nowrap;
+      grid-template-rows: 1fr 4fr;
+      justify-content: center;
+      align-items: center; }
+  .main .personajes-section__tabs .personajes-section__separador {
+    display: none; }
+  .main .personajes-section__tabs .personajes-section__parrafo {
+    width: 83%;
+    margin: 20px 0;
+    padding: 0; }
+  .main .personajes-section__tabs .personajes-section__imagen {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin: 0 30px; }
+  .main .soundtrack-section__parrafo {
+    width: 83%; } }
 
 @media screen and (max-width: 768px) and (min-width: 576px) {
   .main section:not(.bienvenida) {
@@ -8631,7 +8752,28 @@ body {
   .main .historia-section .historia-section__parrafo, .main .mecanica-section .historia-section__parrafo, .main .mecanica-section .mecanica-section__parrafo {
     width: 100%; }
   .main .historia-section div, .main .mecanica-section div {
-    margin: 10px; } }
+    margin: 10px; }
+  .main .personajes-section__tabs .personajes-section__tab-pane {
+    width: 100%; }
+    .main .personajes-section__tabs .personajes-section__tab-pane .personajes-section__pj-container {
+      display: flex;
+      flex-flow: column nowrap;
+      grid-template-rows: 1fr 4fr;
+      justify-content: center;
+      align-items: center; }
+  .main .personajes-section__tabs .personajes-section__separador {
+    display: none; }
+  .main .personajes-section__tabs .personajes-section__parrafo {
+    width: 83%;
+    margin: 20px 0;
+    padding: 0; }
+  .main .personajes-section__tabs .personajes-section__imagen {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin: 0 30px; } }
 
 @media screen and (max-width: 576px) {
   .main section:not(.bienvenida) {
@@ -8652,4 +8794,25 @@ body {
     height: auto; }
     .main .historia-section .historia-section__imagen div, .main .mecanica-section .historia-section__imagen div, .main .mecanica-section .mecanica-section__imagen div {
       width: 66%;
-      margin: 10px; } }
+      margin: 10px; }
+  .main .personajes-section__tabs .personajes-section__tab-pane {
+    width: 100%; }
+    .main .personajes-section__tabs .personajes-section__tab-pane .personajes-section__pj-container {
+      display: flex;
+      flex-flow: column nowrap;
+      grid-template-rows: 1fr 4fr;
+      justify-content: center;
+      align-items: center; }
+  .main .personajes-section__tabs .personajes-section__separador {
+    display: none; }
+  .main .personajes-section__tabs .personajes-section__parrafo {
+    width: 83%;
+    margin: 20px 0;
+    padding: 0; }
+  .main .personajes-section__tabs .personajes-section__imagen {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin: 0 30px; } }

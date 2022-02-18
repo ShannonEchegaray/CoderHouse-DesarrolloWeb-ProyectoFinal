@@ -13,6 +13,14 @@
     .nav_container{
         display: none;
     }
+
+    .footer{
+        padding-top: 15px;
+
+        div{
+            display: none;
+        }
+    }
 }
 
 @include media-q-min(large){
@@ -73,6 +81,34 @@
                 @include tamaño(medium);
             }
         }
+
+        // Personajes
+
+        .personajes-section__tab-pane{
+            @include tamaño(max);
+
+            .personajes-section__pj-container{
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .personajes-section__separador{
+            display: none;
+        }
+
+        .personajes-section__parrafo{
+            margin: 0 20px;
+            padding: 20px;
+        }
+
+        .personajes-section__imagen{
+            display: flex;
+            margin-bottom: 20px;
+            margin: 0 30px;
+        }
     }
 }
 
@@ -109,6 +145,41 @@
         .acercade-section-section{
             .acercade__imagen{
                 @include tamaño(medium);
+            }
+        }
+
+        //  Personajes 
+
+        .personajes-section__tabs{
+            .personajes-section__tab-pane{
+                @include tamaño(max);
+
+                .personajes-section__pj-container{
+                    display: flex;
+                    flex-flow: column nowrap;
+                    grid-template-rows: 1fr 4fr;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .personajes-section__separador{
+                display: none;
+            }
+
+            .personajes-section__parrafo{
+                margin: 20px 0;
+                padding: 0;
+                @include tamaño(large);
+            }
+
+            .personajes-section__imagen{
+                @include tamaño-man(20%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+                margin: 0 30px;
             }
         }
     }
@@ -158,6 +229,46 @@
             }
         }
 
+        // Personajes
+
+        .personajes-section__tabs{
+            .personajes-section__tab-pane{
+                @include tamaño(max);
+
+                .personajes-section__pj-container{
+                    display: flex;
+                    flex-flow: column nowrap;
+                    grid-template-rows: 1fr 4fr;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .personajes-section__separador{
+                display: none;
+            }
+
+            .personajes-section__parrafo{
+                @include tamaño(xlarge);
+                margin: 20px 0;
+                padding: 0;
+            }
+
+            .personajes-section__imagen{
+                @include tamaño-man(20%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+                margin: 0 30px;
+            }
+        }
+
+        // Soundtrack
+
+        .soundtrack-section__parrafo{
+         @include tamaño(xlarge);
+        }
     }
 }
 
@@ -213,8 +324,42 @@
             }   
             div{
                 margin: 10px;
+            }   
+        }
+
+        // Personajes
+
+        .personajes-section__tabs{
+            .personajes-section__tab-pane{
+                @include tamaño(max);
+
+                .personajes-section__pj-container{
+                    display: flex;
+                    flex-flow: column nowrap;
+                    grid-template-rows: 1fr 4fr;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
-            
+
+            .personajes-section__separador{
+                display: none;
+            }
+
+            .personajes-section__parrafo{
+                @include tamaño(xlarge);
+                margin: 20px 0;
+                padding: 0;
+            }
+
+            .personajes-section__imagen{
+                @include tamaño-man(25%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+                margin: 0 30px;
+            }
         }
     }
 }
@@ -274,8 +419,41 @@
                     margin: 10px;
                 }
             }
-            
-            
+        }
+
+        // Personajes
+
+        .personajes-section__tabs{
+            .personajes-section__tab-pane{
+                @include tamaño(max);
+
+                .personajes-section__pj-container{
+                    display: flex;
+                    flex-flow: column nowrap;
+                    grid-template-rows: 1fr 4fr;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .personajes-section__separador{
+                display: none;
+            }
+
+            .personajes-section__parrafo{
+                @include tamaño(xlarge);
+                margin: 20px 0;
+                padding: 0;
+            }
+
+            .personajes-section__imagen{
+                @include tamaño-man(30%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20px;
+                margin: 0 30px;
+            }
         }
     }
 }

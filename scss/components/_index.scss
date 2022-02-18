@@ -29,11 +29,11 @@
             flex-flow: column nowrap;
             justify-content: center;
             padding: 0 10px;
-            width: map-get($contenedores-tamaños, small);
+            @include tamaño(small);
         }
         .acerca-de__imagen{
             padding: 0 10px;
-            width: map-get($contenedores-tamaños, small);
+            @include tamaño(small);
             display: flex;
             align-items: center;
         }

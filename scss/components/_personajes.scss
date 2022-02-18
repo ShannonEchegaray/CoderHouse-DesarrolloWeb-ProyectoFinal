@@ -1,10 +1,78 @@
 // Clases unicas de personajes
 
-/* Dando la misma altura de las imagenes */
-.img-ico{
-    width: 50px;
-    height: 50px;
+.main{
+
+
+    .personajes-section{
+        @include separador;
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 24px;
+    }
+
+    .personajes-section__tabs{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+
+        .personajes-section__con-botones{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            .personajes-section__botones{
+                padding: 0;
+                margin: 12px;
+            }
+        }
+
+        .personajes-section__tab-pane{
+            @include tamaño(xlarge);
+
+            .personajes-section__pj-container{
+                display: grid;
+                grid-template-areas: "separador titulo"
+                                     "imagen parrafo";
+                grid-template-columns: 1fr 2fr;
+                grid-template-rows: 1fr 4fr;
+                align-items: center;
+                justify-items: center;
+            }
+        }
+
+        .personajes-section__separador{
+            grid-area: separador;
+        }
+
+        .personajes-section__parrafo{
+            grid-area: parrafo;
+            align-items: center;
+            margin: 0 20px;
+            padding: 20px;
+        }
+
+        .personajes-section__titulo{
+            grid-area: titulo;
+            align-items: center;
+        }
+
+        .personajes-section__imagen{
+            grid-area: imagen;
+            @include tamaño(medium);
+            margin-bottom: 20px;
+            margin: 0 30px;
+        }
+        
+    }
+    
+    /* Dando la misma altura de las imagenes */
+
+    .img-ico{
+        width: 50px;
+        height: 50px;
+    }
 }
+
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
     background-color: $color-boton-hover;

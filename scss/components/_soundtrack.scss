@@ -1,0 +1,19 @@
+// propiedades unicas de soundtrack
+
+.main{
+    .soundtrack-section{
+        @include separador;
+        padding:24px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        .soundtrack-section__parrafo{
+            @include tamaño(large);
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            padding: 0 10px;
+        }
+    }
+}

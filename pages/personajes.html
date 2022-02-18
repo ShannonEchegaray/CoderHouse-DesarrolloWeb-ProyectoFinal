@@ -79,42 +79,45 @@
         
             <!--Personajes-->
             <section class="">
-                <div class="">
-                    <h2 class="">* PERSONAJES</h2>
-                    <h2 class="">PROTAGONISTAS</h2>
-                    <div class="">
+                <div class="personajes-section main-color">
+                    <div class="personajes-section__parrafo">
+                        <h2 class="centrar-texto">* PERSONAJES</h2>
+                        <h2 class="centrar-texto">PROTAGONISTAS</h2>
+                    </div>
+                    <div class="personajes-section__tabs">
                         <!-- Nav tabs -->
-                        <ul class="" id="pills-tab" role="tablist">
-                            <li class="">
-                                <button class="" id="kriss-tab" data-bs-toggle="pill" data-bs-target="#kriss" type="button" role="tab" aria-controls="kriss" aria-selected="true">
-                                    <img src="../img/Kriss-ico-blanco.png" alt="" class="">
+                        <ul class="nav nav-pills personajes-section__con-botones" id="pills-tab" role="tablist">
+                            <li class="nav-item ">
+                                <button class="nav-link active personajes-section__botones" id="kriss-tab" data-bs-toggle="pill" data-bs-target="#kriss" type="button" role="tab" aria-controls="kriss" aria-selected="true">
+                                    <img src="../img/Kriss-ico-blanco.png" alt="" class="img-ico">
                                 </button>
                             </li>
-                            <li class="">
-                                <button class="" id="susie-tab" data-bs-toggle="pill" data-bs-target="#susie" type="button" role="tab" aria-controls="susie" aria-selected="true">
-                                    <img src="../img/susie-ico-blanco.png" alt="" class="">
+                            <li class="nav-item">
+                                <button class="nav-link personajes-section__botones" id="susie-tab" data-bs-toggle="pill" data-bs-target="#susie" type="button" role="tab" aria-controls="susie" aria-selected="true">
+                                    <img src="../img/susie-ico-blanco.png" alt="" class="img-ico">
                                 </button>
                             </li>
-                            <li class="">
-                                <button class="" id="ralsei-tab" data-bs-toggle="pill" data-bs-target="#ralsei" type="button" role="tab" aria-controls="ralsei" aria-selected="true">
-                                    <img src="../img/ralsei-ico-blanco.png" alt="" class="">
+                            <li class="nav-item">
+                                <button class="nav-link personajes-section__botones" id="ralsei-tab" data-bs-toggle="pill" data-bs-target="#ralsei" type="button" role="tab" aria-controls="ralsei" aria-selected="true">
+                                    <img src="../img/ralsei-ico-blanco.png" alt="" class="img-ico">
                                 </button>
                             </li>
                         </ul>
                         
                         <!-- Tab panes -->
-                        <div class="">
-                            <div class="" id="kriss" role="tabpanel" aria-labelledby="kriss-tab">
-                                <div class="">
+                        <div class="tab-content personajes-section__tab-pane">
+                            <div class="tab-pane active" id="kriss" role="tabpanel" aria-labelledby="kriss-tab">
+                                <div class="personajes-section__pj-container">
                                     <!-- Div Kriss -->
-                                    <div class="">
-                                        <div class=""></div>
-                                        <h3 class="">Kriss</h3>
-                                        <div class=""></div>
-                                        <div class="">
-                                            <img src="../img/kriss.png" alt="Personaje Kriss" class="">
-                                        </div>
-                                        <p class="">
+                                    <div class="personajes-section__separador"></div>
+                                    <div class="personajes-section__titulo">
+                                        <h3 class="centrar-texto">Kriss</h3>
+                                    </div>
+                                    <div class="personajes-section__imagen">
+                                        <img src="../img/kriss.png" alt="Personaje Kriss" class="imagenes-fix">
+                                    </div>
+                                    <div class="personajes-section__parrafo">
+                                        <p class="centrar-texto">
                                             Kriss es el protagonista principal, es un luminico (Asi son llamados los seres que no son oscuros) y es el personaje que controla el jugador. Es el unico humano en el pueblo en el que transcurre el juego, tiene un hermano llamado Asriel y padres llamados Asgore y toriel. A traves del juego se le indica que es el elegido de una profecia llamada "Deltarune" en la que va a tener que cerrar las fuentes oscuras que se vayan creando a lo largo de la historia. Su personalidad rige el ser una persona callada que no actua hasta que otro lo lleve a tal.
                                         </p>
                                     </div>
@@ -123,36 +126,40 @@
         
                             <!-- Div Susie -->
         
-                            <div class="" id="susie" role="tabpanel" aria-labelledby="susie-tab">
-                                <div class="">
-                                    <div class="">
-                                        <div class=""></div>
-                                        <h3 class="">Susie</h3>
-                                        <div class=""></div>
-                                        <div class="">
-                                            <img src="../img/susie.png" alt="Personaje Susie" class="">
-                                        </div>
-                                        <p class="">
+                            <div class="tab-pane" id="susie" role="tabpanel" aria-labelledby="susie-tab">
+                                <div class="personajes-section__pj-container">
+                                    <div class=""></div>
+                                    <div class="personajes-section__parrafo">
+                                        <h3 class="centrar-texto">Susie</h3>
+                                    </div>
+                                    <div class="personajes-section__imagen">
+                                        <img src="../img/susie.png" alt="Personaje Susie" class="imagenes-fix">
+                                    </div>
+                                    <div class="personajes-section__parrafo">
+                                        <p class="centrar-texto">
                                             Susie es un personaje protagonista, heroe de la profecia "Deltarune" en la que ocupa el puesto de monstruo. Ya que tampoco reside de la oscuridad es una luminica, no se tiene informacion sobre su ubicacion en el pueblo, y al principio de la historia tiene el rol de "bully". A lo largo del transcurso del juego se nota una evolucion clara acerca de su personalidad.
                                         </p>
-                                    </div> 
-                                </div>  
+                                    </div>
+                                </div> 
                             </div>
         
                             <!-- Div Ralsei -->
         
-                            <div class="" id="ralsei" role="tabpanel" aria-labelledby="ralsei-tab">
+                            <div class="tab-pane" id="ralsei" role="tabpanel" aria-labelledby="ralsei-tab">
                                 <div class="">
-                                    <div class="">
-                                        <div class=""></div>
-                                        <h3 class="">Ralsei</h3>
-                                        <div class=""></div>
-                                        <div class="">
-                                            <img src="../img/ralsei.png" alt="Personaje Ralsei" class="">
+                                    <div class="personajes-section__pj-container">
+                                        <div class="personajes-section__separador"></div>
+                                        <div class="personajes-section__parrafo">
+                                            <h3 class="centrar-texto">Ralsei</h3>
                                         </div>
-                                        <p class="">
-                                            Ralsei es un personaje protagonista, heroe de la profecia "Deltarune" en la que ocupa el puesto de Principe de la oscuridad. Es un Oscuro y es el primer personaje que nos encontramos formalmente cuando entramos al "Dark World". Ralsei nos acompaña a lo largo de la historia siendo un personaje empatico y agradable. Como dato curioso Ralsei es un anagrama de Asriel, hermano de Kris.
-                                        </p>
+                                        <div class="personajes-section__imagen">
+                                            <img src="../img/ralsei.png" alt="Personaje Ralsei" class="imagenes-fix">
+                                        </div>
+                                        <div class="personajes-section__parrafo">
+                                            <p class="centrar-texto">
+                                                Ralsei es un personaje protagonista, heroe de la profecia "Deltarune" en la que ocupa el puesto de Principe de la oscuridad. Es un Oscuro y es el primer personaje que nos encontramos formalmente cuando entramos al "Dark World". Ralsei nos acompaña a lo largo de la historia siendo un personaje empatico y agradable. Como dato curioso Ralsei es un anagrama de Asriel, hermano de Kris.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>                           
                             </div>
