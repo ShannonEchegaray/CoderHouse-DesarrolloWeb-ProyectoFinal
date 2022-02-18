@@ -8441,7 +8441,6 @@ body {
 .centrar-texto {
   text-align: center; }
 
-/* Animaciones del main de index */
 .main .bienvenida {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -8490,6 +8489,52 @@ body {
   .glowing:hover {
     box-shadow: 0px 0px 10px #7491F6;
     transform: scale(1.003); }
+
+.main .acercade-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 24px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center; }
+  .main .acercade-section .acercade-section__parrafo {
+    width: 100%;
+    padding: 0 12px; }
+  .main .acercade-section .acercade-section__imagen {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px; }
+
+.main .historia-section, .main .mecanica-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 24px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center; }
+  .main .historia-section .historia-section__parrafo, .main .mecanica-section .historia-section__parrafo, .main .mecanica-section .mecanica-section__parrafo {
+    padding: 0 12px;
+    width: 100%; }
+  .main .historia-section .historia-section__imagen, .main .mecanica-section .historia-section__imagen, .main .mecanica-section .mecanica-section__imagen {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 176px;
+    overflow: hidden;
+    margin-bottom: 20px; }
+    .main .historia-section .historia-section__imagen div, .main .mecanica-section .historia-section__imagen div, .main .mecanica-section .mecanica-section__imagen div {
+      margin: 10px; }
+      .main .historia-section .historia-section__imagen div img, .main .mecanica-section .historia-section__imagen div img, .main .mecanica-section .mecanica-section__imagen div img {
+        height: 100%; }
+
+.main .mecanica-section .mecanica-section__imagen {
+  height: 168px; }
+  .main .mecanica-section .mecanica-section__imagen div {
+    margin: 10px; }
 
 /* Dando la misma altura de las imagenes */
 .img-ico {
@@ -8540,6 +8585,8 @@ body {
   .main .acercade .acerca-de__parrafo, .main .personajes .acerca-de__parrafo, .main .personajes .personajes__parrafo {
     width: 50%; }
   .main .acercade .acerca-de__imagen, .main .personajes .acerca-de__imagen, .main .personajes .personajes__iamgen, .main .personajes .personajes__imagen {
+    width: 50%; }
+  .main .acercade-section .acercade-section__imagen {
     width: 50%; } }
 
 @media screen and (max-width: 1200px) and (min-width: 992px) {
@@ -8548,6 +8595,8 @@ body {
   .main .acercade .acerca-de__parrafo, .main .personajes .acerca-de__parrafo, .main .personajes .personajes__parrafo {
     width: 50%; }
   .main .acercade .acerca-de__imagen, .main .personajes .acerca-de__imagen, .main .personajes .personajes__iamgen, .main .personajes .personajes__imagen {
+    width: 50%; }
+  .main .acercade-section-section .acercade__imagen {
     width: 50%; } }
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
@@ -8561,7 +8610,9 @@ body {
     .main .acercade .acerca-de__parrafo, .main .personajes .acerca-de__parrafo, .main .personajes .personajes__parrafo {
       width: 100%; }
     .main .acercade .acerca-de__imagen, .main .personajes .acerca-de__imagen, .main .personajes .personajes__iamgen, .main .personajes .personajes__imagen {
-      width: 66%; } }
+      width: 66%; }
+  .main .acercade-section .acercade-section__imagen {
+    width: 50%; } }
 
 @media screen and (max-width: 768px) and (min-width: 576px) {
   .main section:not(.bienvenida) {
@@ -8574,7 +8625,13 @@ body {
     .main .acercade .acerca-de__parrafo, .main .personajes .acerca-de__parrafo, .main .personajes .personajes__parrafo {
       width: 100%; }
     .main .acercade .acerca-de__imagen, .main .personajes .acerca-de__imagen, .main .personajes .personajes__iamgen, .main .personajes .personajes__imagen {
-      width: 66%; } }
+      width: 66%; }
+  .main .acercade-section .acercade-section__imagen {
+    width: 83%; }
+  .main .historia-section .historia-section__parrafo, .main .mecanica-section .historia-section__parrafo, .main .mecanica-section .mecanica-section__parrafo {
+    width: 100%; }
+  .main .historia-section div, .main .mecanica-section div {
+    margin: 10px; } }
 
 @media screen and (max-width: 576px) {
   .main section:not(.bienvenida) {
@@ -8587,4 +8644,12 @@ body {
     .main .acercade .acerca-de__parrafo, .main .personajes .acerca-de__parrafo, .main .personajes .personajes__parrafo {
       width: 100%; }
     .main .acercade .acerca-de__imagen, .main .personajes .acerca-de__imagen, .main .personajes .personajes__iamgen, .main .personajes .personajes__imagen {
-      width: 100%; } }
+      width: 100%; }
+  .main .acercade-section .acercade-section__imagen {
+    width: 100%; }
+  .main .historia-section .historia-section__imagen, .main .mecanica-section .historia-section__imagen, .main .mecanica-section .mecanica-section__imagen {
+    flex-flow: column nowrap;
+    height: auto; }
+    .main .historia-section .historia-section__imagen div, .main .mecanica-section .historia-section__imagen div, .main .mecanica-section .mecanica-section__imagen div {
+      width: 66%;
+      margin: 10px; } }

@@ -1,0 +1,67 @@
+// Clases unicas de index
+
+.main{
+    .acercade-section{
+        @include separador;
+        padding: 24px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        .acercade-section__parrafo{
+            @include tamaño(max);
+            padding: 0 12px;
+        }
+        .acercade-section__imagen{
+            @include tamaño(medium);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 12px;
+        }
+    }
+
+    .historia-section{
+        @include separador;
+        padding: 24px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        .historia-section__parrafo{
+            padding: 0 12px;
+            @include tamaño(max);
+        }
+        .historia-section__imagen{
+            @include tamaño(max);
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            height: 176px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            
+            div{
+                margin: 10px;
+                img{
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .mecanica-section{
+        @extend .historia-section;
+        .mecanica-section__parrafo{
+            @extend .historia-section__parrafo;
+        }
+
+        .mecanica-section__imagen{
+            @extend .historia-section__imagen;
+            height: 168px;
+            div{
+                margin: 10px;
+            }
+        }
+    }
+}
+

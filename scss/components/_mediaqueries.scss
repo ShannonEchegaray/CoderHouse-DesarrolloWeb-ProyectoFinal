@@ -65,6 +65,14 @@
                 @extend .acerca-de__imagen;
             }
         }
+
+        // acerca-de
+
+        .acercade-section{
+            .acercade-section__imagen{
+                @include tamaño(medium);
+            }
+        }
     }
 }
 
@@ -93,6 +101,14 @@
             }
             .personajes__imagen{
                 @extend .acerca-de__imagen;
+            }
+        }
+
+        // acerca-de
+
+        .acercade-section-section{
+            .acercade__imagen{
+                @include tamaño(medium);
             }
         }
     }
@@ -133,6 +149,15 @@
                 @extend .acerca-de__imagen;
             }
         }
+
+        // acerca-de
+
+        .acercade-section{
+            .acercade-section__imagen{
+                @include tamaño(medium);
+            }
+        }
+
     }
 }
 
@@ -173,6 +198,24 @@
                 @extend .acerca-de__imagen;
             }
         }
+
+        // acerca-de
+
+        .acercade-section{
+            .acercade-section__imagen{
+                @include tamaño(xlarge);
+            }
+        }
+
+        .historia-section{
+            .historia-section__parrafo{
+                @include tamaño(max);
+            }   
+            div{
+                margin: 10px;
+            }
+            
+        }
     }
 }
 
@@ -210,6 +253,29 @@
             .personajes__imagen{
                 @extend .acerca-de__imagen;
             }
+        }
+
+        // acerca-de
+
+        .acercade-section{
+            .acercade-section__imagen{
+                @include tamaño(max);
+            }
+        }
+
+        .historia-section{
+            .historia-section__imagen{
+
+                flex-flow: column nowrap;
+                height: auto;
+
+                div{
+                    @include tamaño(large);
+                    margin: 10px;
+                }
+            }
+            
+            
         }
     }
 }
