@@ -4,15 +4,19 @@
     .autor-section{
         @include separador;
         padding: 24px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
 
         .autor-section__parrafo{
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
             padding: 0 10px;
+            @include tamaño(xlarge);
 
             .autor-section__imagen{
-                @include tamaño(medium);
+                @include tamaño(small);
                 margin-bottom: 20px;
             }
         }
@@ -23,12 +27,14 @@
         padding: 24px;
         display: flex;
         flex-flow: column nowrap;
+        align-items: center;
 
         .undertale-section__parrafo{
+            @include tamaño(xlarge);
             padding: 0 10px;
         }
         .undertale-section__imagen{
-            @include tamaño(max);
+            @include tamaño(medium);
             margin-bottom: 20px;
         }
     }
@@ -38,14 +44,27 @@
         padding: 24px;
         display: flex;
         flex-flow: column nowrap;
+        align-items: center;
 
         .legado-section__parrafo{
+            @include tamaño(xlarge);
             padding: 0 10px;
         }
         .legado-section__lista{
             @include tamaño(max);
             display: flex;
             justify-content: center;
+            justify-items: center;
+
+            ul{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+
+                li{
+                    margin: 10px;
+                }
+            }
         }
     }
 }

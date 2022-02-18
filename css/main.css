@@ -8615,14 +8615,18 @@ body {
 .main .autor-section {
   margin-top: 50px;
   margin-bottom: 50px;
-  padding: 24px; }
+  padding: 24px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center; }
   .main .autor-section .autor-section__parrafo {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    padding: 0 10px; }
+    padding: 0 10px;
+    width: 83%; }
     .main .autor-section .autor-section__parrafo .autor-section__imagen {
-      width: 50%;
+      width: 33%;
       margin-bottom: 20px; }
 
 .main .undertale-section {
@@ -8630,12 +8634,36 @@ body {
   margin-bottom: 50px;
   padding: 24px;
   display: flex;
-  flex-flow: column nowrap; }
+  flex-flow: column nowrap;
+  align-items: center; }
   .main .undertale-section .undertale-section__parrafo {
+    width: 83%;
     padding: 0 10px; }
   .main .undertale-section .undertale-section__imagen {
-    width: 100%;
+    width: 50%;
     margin-bottom: 20px; }
+
+.main .legado-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 24px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center; }
+  .main .legado-section .legado-section__parrafo {
+    width: 83%;
+    padding: 0 10px; }
+  .main .legado-section .legado-section__lista {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center; }
+    .main .legado-section .legado-section__lista ul {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center; }
+      .main .legado-section .legado-section__lista ul li {
+        margin: 10px; }
 
 /* Animaciones */
 @keyframes select {
@@ -8776,7 +8804,16 @@ body {
     flex-flow: column nowrap;
     align-items: center; }
     .main .soundtrack-section .soundtrack-section__lista div, .main .soundtrack-section .comunidad-section__lista div, .main .comunidad-section .soundtrack-section__lista div, .main .comunidad-section .comunidad-section__lista div {
-      width: 100%; } }
+      width: 100%; }
+  .main .autor-section .autor-section__parrafo {
+    width: 100%; }
+  .main .undertale-section .undertale-section__parrafo {
+    width: 100%; }
+  .main .undertale-section .undertale-section__imagen {
+    width: 66%; }
+  .main .legado-section .legado-section__parrafo {
+    width: 100%;
+    padding: 0 10px; } }
 
 @media screen and (max-width: 768px) and (min-width: 576px) {
   .main section:not(.bienvenida) {
@@ -8827,7 +8864,16 @@ body {
     flex-flow: column nowrap;
     align-items: center; }
     .main .soundtrack-section .soundtrack-section__lista div, .main .soundtrack-section .comunidad-section__lista div, .main .comunidad-section .soundtrack-section__lista div, .main .comunidad-section .comunidad-section__lista div {
-      width: 100%; } }
+      width: 100%; }
+  .main .autor-section .autor-section__parrafo {
+    width: 100%; }
+  .main .undertale-section .undertale-section__parrafo {
+    width: 100%; }
+  .main .undertale-section .undertale-section__imagen {
+    width: 66%; }
+  .main .legado-section .legado-section__parrafo {
+    width: 100%;
+    padding: 0 10px; } }
 
 @media screen and (max-width: 576px) {
   .main section:not(.bienvenida) {
@@ -8880,4 +8926,15 @@ body {
     flex-flow: column nowrap;
     align-items: center; }
     .main .soundtrack-section .soundtrack-section__lista div, .main .soundtrack-section .comunidad-section__lista div, .main .comunidad-section .soundtrack-section__lista div, .main .comunidad-section .comunidad-section__lista div {
-      width: 100%; } }
+      width: 100%; }
+  .main .autor-section .autor-section__parrafo {
+    width: 100%; }
+    .main .autor-section .autor-section__parrafo .autor-section__imagen {
+      width: 50%; }
+  .main .undertale-section .undertale-section__parrafo {
+    width: 100%; }
+  .main .undertale-section .undertale-section__imagen {
+    width: 83%; }
+  .main .legado-section .legado-section__parrafo {
+    width: 100%;
+    padding: 0 10px; } }

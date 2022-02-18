@@ -282,6 +282,31 @@
                 }
             }
         }
+
+        // Autor
+
+        .autor-section{
+            .autor-section__parrafo{
+                @include tamaño(max);
+            }
+        }
+
+        .undertale-section{
+    
+            .undertale-section__parrafo{
+                @include tamaño(max);
+            }
+            .undertale-section__imagen{
+                @include tamaño(large);
+            }
+        }
+        
+        .legado-section{
+            .legado-section__parrafo{
+                @include tamaño(max);
+                padding: 0 10px;
+            }
+        }
     }
 }
 
@@ -392,6 +417,31 @@
                 div{
                     @include tamaño(max);
                 }
+            }
+        }
+
+        // Autor
+
+        .autor-section{
+            .autor-section__parrafo{
+                @include tamaño(max);
+            }
+        }
+
+        .undertale-section{
+    
+            .undertale-section__parrafo{
+                @include tamaño(max);
+            }
+            .undertale-section__imagen{
+                @include tamaño(large);
+            }
+        }
+
+        .legado-section{
+            .legado-section__parrafo{
+                @include tamaño(max);
+                padding: 0 10px;
             }
         }
     }
@@ -506,6 +556,35 @@
                 div{
                     @include tamaño(max);
                 }
+            }
+        }
+
+        // Autor
+
+        .autor-section{
+            .autor-section__parrafo{
+                @include tamaño(max);
+
+                .autor-section__imagen{
+                    @include tamaño(medium);
+                }
+            }   
+        }
+
+        .undertale-section{
+    
+            .undertale-section__parrafo{
+                @include tamaño(max);
+            }
+            .undertale-section__imagen{
+                @include tamaño(xlarge);
+            }
+        }
+
+        .legado-section{
+            .legado-section__parrafo{
+                @include tamaño(max);
+                padding: 0 10px;
             }
         }
     }
