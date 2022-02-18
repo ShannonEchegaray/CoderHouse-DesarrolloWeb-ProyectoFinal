@@ -8387,11 +8387,11 @@ body {
 .main {
   grid-area: main;
   min-height: 100vh;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center; }
-  .main section {
+  .main section:not(.bienvenida) {
     width: 80%; }
   .main section > div {
     border: 5px solid #fff; }
@@ -8405,22 +8405,6 @@ body {
     text-decoration: none; }
     .main .main-anchor-title:hover {
       color: #ffff00; }
-  .main .acercade {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    padding: 24px; }
-    .main .acercade .acerca-de__parrafo {
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: center;
-      padding: 0 10px;
-      width: 33%; }
-    .main .acercade .acerca-de__imagen {
-      padding: 0 10px;
-      width: 33%;
-      display: flex;
-      align-items: center; }
 
 /* Footer */
 .footer {
@@ -8458,6 +8442,49 @@ body {
   text-align: center; }
 
 /* Animaciones del main de index */
+.main .bienvenida {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center; }
+  .main .bienvenida .bienvenida__imagen {
+    width: 50%;
+    margin-bottom: 10px; }
+  .main .bienvenida .bienvenida__parrafo {
+    width: 80%; }
+
+.main .acercade, .main .personajes {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  padding: 24px; }
+  .main .acercade .acerca-de__parrafo, .main .personajes .acerca-de__parrafo, .main .personajes .personajes__parrafo {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 0 10px;
+    width: 33%; }
+  .main .acercade .acerca-de__imagen, .main .personajes .acerca-de__imagen, .main .personajes .personajes__iamgen, .main .personajes .personajes__imagen {
+    padding: 0 10px;
+    width: 33%;
+    display: flex;
+    align-items: center; }
+
+.main .soundtrack {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 24px; }
+
+.main .autor {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 24px; }
+
 .glowing {
   transition: 1.2s; }
   .glowing:hover {
@@ -8508,16 +8535,56 @@ body {
 
 /* Breakpoints Mobile */
 @media screen and (max-width: 1400px) and (min-width: 1200px) {
-  .main .acercade .acerca-de__parrafo {
+  .main .bienvenida .bienvenida__imagen {
+    width: 66%; }
+  .main .acercade .acerca-de__parrafo, .main .personajes .acerca-de__parrafo, .main .personajes .personajes__parrafo {
     width: 50%; }
-  .main .acercade .acerca-de__imagen {
+  .main .acercade .acerca-de__imagen, .main .personajes .acerca-de__imagen, .main .personajes .personajes__iamgen, .main .personajes .personajes__imagen {
+    width: 50%; } }
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+  .main .bienvenida .bienvenida__imagen {
+    width: 66%; }
+  .main .acercade .acerca-de__parrafo, .main .personajes .acerca-de__parrafo, .main .personajes .personajes__parrafo {
+    width: 50%; }
+  .main .acercade .acerca-de__imagen, .main .personajes .acerca-de__imagen, .main .personajes .personajes__iamgen, .main .personajes .personajes__imagen {
     width: 50%; } }
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
-  .main .acercade {
+  .main section:not(.bienvenida) {
+    width: 90%; }
+  .main .bienvenida .bienvenida__imagen {
+    width: 83%; }
+  .main .acercade, .main .personajes {
     flex-flow: column;
     align-items: center; }
-    .main .acercade .acerca-de__parrafo {
-      width: 83%; }
-    .main .acercade .acerca-de__imagen {
-      width: 83%; } }
+    .main .acercade .acerca-de__parrafo, .main .personajes .acerca-de__parrafo, .main .personajes .personajes__parrafo {
+      width: 100%; }
+    .main .acercade .acerca-de__imagen, .main .personajes .acerca-de__imagen, .main .personajes .personajes__iamgen, .main .personajes .personajes__imagen {
+      width: 66%; } }
+
+@media screen and (max-width: 768px) and (min-width: 576px) {
+  .main section:not(.bienvenida) {
+    width: 100%; }
+  .main .bienvenida .bienvenida__imagen {
+    width: 83%; }
+  .main .acercade, .main .personajes {
+    flex-flow: column;
+    align-items: center; }
+    .main .acercade .acerca-de__parrafo, .main .personajes .acerca-de__parrafo, .main .personajes .personajes__parrafo {
+      width: 100%; }
+    .main .acercade .acerca-de__imagen, .main .personajes .acerca-de__imagen, .main .personajes .personajes__iamgen, .main .personajes .personajes__imagen {
+      width: 66%; } }
+
+@media screen and (max-width: 576px) {
+  .main section:not(.bienvenida) {
+    width: 100%; }
+  .main .bienvenida .bienvenida__imagen {
+    width: 83%; }
+  .main .acercade, .main .personajes {
+    flex-flow: column;
+    align-items: center; }
+    .main .acercade .acerca-de__parrafo, .main .personajes .acerca-de__parrafo, .main .personajes .personajes__parrafo {
+      width: 100%; }
+    .main .acercade .acerca-de__imagen, .main .personajes .acerca-de__imagen, .main .personajes .personajes__iamgen, .main .personajes .personajes__imagen {
+      width: 100%; } }

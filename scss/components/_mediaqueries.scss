@@ -39,34 +39,98 @@
 
 @include media-max-min(extraextralarge, extralarge){
     .main{
+
+        // Index
+
+        .bienvenida{
+            .bienvenida__imagen{
+                @include tamaño(large);
+            }
+        }
+
         .acercade{
             .acerca-de__parrafo{
-                width: map-get($contenedores-tamaños, medium);
+                @include tamaño(medium);
             }
             .acerca-de__imagen{
-                width: map-get($contenedores-tamaños, medium);
+                @include tamaño(medium);
+            }
+        }
+
+        .personajes{
+            .personajes__parrafo{
+                @extend .acerca-de__parrafo;
+            }
+            .personajes__imagen{
+                @extend .acerca-de__imagen;
             }
         }
     }
 }
 
 @include media-max-min(extralarge, large){
+    .main{
 
+        // Index
+
+        .bienvenida{
+            .bienvenida__imagen{
+                @include tamaño(large);
+            }
+        }
+        .acercade{
+            .acerca-de__parrafo{
+                @include tamaño(medium);
+            }
+            .acerca-de__imagen{
+                @include tamaño(medium);
+            }
+        }
+
+        .personajes{
+            .personajes__parrafo{
+                @extend .acerca-de__parrafo;
+            }
+            .personajes__imagen{
+                @extend .acerca-de__imagen;
+            }
+        }
+    }
 }
 
 @include media-max-min(large, medium){
 
     .main{
+
+        // Index
+
+        section:not(.bienvenida){
+            width: 90%;
+        }
+
+        .bienvenida{
+            .bienvenida__imagen{
+                @include tamaño(xlarge);
+            }
+        }
+
         .acercade{
             flex-flow: column;
             align-items: center;
-
             .acerca-de__parrafo{
-                width: map-get($contenedores-tamaños, xlarge); 
+                @include tamaño(max);
             }
-
             .acerca-de__imagen{
-                width: map-get($contenedores-tamaños, xlarge);
+                @include tamaño(large);
+            }
+        }
+
+        .personajes{
+            .personajes__parrafo{
+                @extend .acerca-de__parrafo;
+            }
+            .personajes__imagen{
+                @extend .acerca-de__imagen;
             }
         }
     }
@@ -74,4 +138,78 @@
 
 @include media-max-min(medium, small){
     
+    .main{
+
+        // Index
+
+        section:not(.bienvenida){
+            width: 100%;
+        }
+
+
+
+        .bienvenida{
+            .bienvenida__imagen{
+                @include tamaño(xlarge);
+            }
+        }
+
+        .acercade{
+            flex-flow: column;
+            align-items: center;
+            .acerca-de__parrafo{
+                @include tamaño(max);
+            }
+            .acerca-de__imagen{
+                @include tamaño(large);
+            }
+        }
+
+        .personajes{
+            .personajes__parrafo{
+                @extend .acerca-de__parrafo;
+            }
+            .personajes__imagen{
+                @extend .acerca-de__imagen;
+            }
+        }
+    }
+}
+
+@include media-q-max(small){
+    .main{
+
+        // Index
+
+        section:not(.bienvenida){
+            width: 100%
+        }
+
+
+        .bienvenida{
+            .bienvenida__imagen{
+                @include tamaño(xlarge);
+            }
+        }
+
+        .acercade{
+            flex-flow: column;
+            align-items: center;
+            .acerca-de__parrafo{
+                @include tamaño(max);
+            }
+            .acerca-de__imagen{
+                @include tamaño(max);
+            }
+        }
+
+        .personajes{
+            .personajes__parrafo{
+                @extend .acerca-de__parrafo;
+            }
+            .personajes__imagen{
+                @extend .acerca-de__imagen;
+            }
+        }
+    }
 }

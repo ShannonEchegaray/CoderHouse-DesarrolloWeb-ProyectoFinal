@@ -32,3 +32,12 @@
         text-shadow: 0 0 4px $color-boton-hover;
     }
 }
+
+@mixin tamaño($tamaño){
+    width: map-get($contenedores-tamaños, $tamaño);
+}
+
+@mixin separador{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

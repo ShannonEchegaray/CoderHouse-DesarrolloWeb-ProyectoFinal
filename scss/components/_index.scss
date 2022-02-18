@@ -2,6 +2,70 @@
 /* Animaciones del main de index */
 
 
+.main{
+    .bienvenida{
+        @include separador;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        .bienvenida__imagen{
+            width: map-get($contenedores-tamaños,  medium);
+            margin-bottom: 10px;
+        }
+        .bienvenida__parrafo{
+            width: 80%;
+
+        }
+    }
+
+    .acercade{
+        @include separador;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        padding: 24px;
+
+        .acerca-de__parrafo{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            padding: 0 10px;
+            width: map-get($contenedores-tamaños, small);
+        }
+        .acerca-de__imagen{
+            padding: 0 10px;
+            width: map-get($contenedores-tamaños, small);
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .personajes{
+        @extend .acercade;
+
+        .personajes__parrafo{
+            @extend .acerca-de__parrafo;
+        }
+
+        .personajes__iamgen{
+            @extend .acerca-de__imagen;
+        }
+    }
+
+    .soundtrack{
+        @include separador;
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 24px;
+    }
+
+    .autor{
+        @include separador;
+        padding: 24px;
+    }
+}
+
 .glowing{
     transition: 1.2s;
     &:hover{
