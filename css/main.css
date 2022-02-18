@@ -8386,7 +8386,7 @@ body {
 /* Main */
 .main {
   grid-area: main;
-  min-height: 100vh;
+  min-height: 75vh;
   margin-bottom: 100px;
   display: flex;
   flex-flow: column nowrap;
@@ -8577,7 +8577,7 @@ body {
       align-items: center; }
     .main .personajes-section__tabs .personajes-section__imagen {
       grid-area: imagen;
-      width: 50%;
+      width: 35%;
       margin-bottom: 20px;
       margin: 0 30px; }
   .main .img-ico {
@@ -8719,15 +8719,16 @@ body {
       flex-flow: column nowrap;
       justify-content: center;
       align-items: center; }
-  .main .personajes-section__separador {
-    display: none; }
-  .main .personajes-section__parrafo {
-    margin: 0 20px;
-    padding: 20px; }
-  .main .personajes-section__imagen {
-    display: flex;
-    margin-bottom: 20px;
-    margin: 0 30px; } }
+      .main .personajes-section__tab-pane .personajes-section__pj-container .personajes-section__separador {
+        display: none; }
+      .main .personajes-section__tab-pane .personajes-section__pj-container .personajes-section__parrafo {
+        margin: 0 20px;
+        padding: 20px; }
+      .main .personajes-section__tab-pane .personajes-section__pj-container .personajes-section__imagen {
+        width: 50%;
+        display: flex;
+        margin-bottom: 20px;
+        margin: 0 30px; } }
 
 @media screen and (max-width: 1200px) and (min-width: 992px) {
   .main .bienvenida .bienvenida__imagen {

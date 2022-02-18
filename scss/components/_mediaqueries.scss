@@ -92,22 +92,23 @@
                 flex-flow: column nowrap;
                 justify-content: center;
                 align-items: center;
+
+                .personajes-section__separador{
+                    display: none;
+                }
+        
+                .personajes-section__parrafo{
+                    margin: 0 20px;
+                    padding: 20px;
+                }
+        
+                .personajes-section__imagen{
+                    @include tamaño-man(50%);
+                    display: flex;
+                    margin-bottom: 20px;
+                    margin: 0 30px;
+                }
             }
-        }
-
-        .personajes-section__separador{
-            display: none;
-        }
-
-        .personajes-section__parrafo{
-            margin: 0 20px;
-            padding: 20px;
-        }
-
-        .personajes-section__imagen{
-            display: flex;
-            margin-bottom: 20px;
-            margin: 0 30px;
         }
     }
 }

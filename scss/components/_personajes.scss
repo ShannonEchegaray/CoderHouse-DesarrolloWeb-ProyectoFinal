@@ -58,7 +58,7 @@
 
         .personajes-section__imagen{
             grid-area: imagen;
-            @include tamaño(medium);
+            @include tamaño-man(35%);
             margin-bottom: 20px;
             margin: 0 30px;
         }
