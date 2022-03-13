@@ -8484,12 +8484,6 @@ body {
   margin-bottom: 50px;
   padding: 24px; }
 
-.glowing {
-  transition: 1.2s; }
-  .glowing:hover {
-    box-shadow: 0px 0px 10px #7491F6;
-    transform: scale(1.003); }
-
 .main .acercade-section {
   margin-top: 50px;
   margin-bottom: 50px;

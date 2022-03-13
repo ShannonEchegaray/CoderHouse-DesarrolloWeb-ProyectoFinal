@@ -9,7 +9,7 @@
         align-items: center;
 
         .bienvenida__imagen{
-            width: map-get($contenedores-tamaños,  medium);
+            width: map-get($contenedores-tamaños, medium);
             margin-bottom: 10px;
         }
         .bienvenida__parrafo{
@@ -65,12 +65,5 @@
     }
 }
 
-.glowing{
-    transition: 1.2s;
-    &:hover{
-        box-shadow: 0px 0px 10px #7491F6;
-        transform: scale(1.003)
-    }
-}
 
 
