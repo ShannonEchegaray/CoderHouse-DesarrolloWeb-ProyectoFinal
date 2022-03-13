@@ -31,20 +31,17 @@
             @include tamaño(max);
         }
         .historia-section__imagen{
-            @include tamaño(max);
+            @include tamaño(large);
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
             align-items: center;
-            height: 176px;
-            overflow: hidden;
             margin-bottom: 20px;
-            
+            overflow: hidden;
+
             div{
                 margin: 10px;
-                img{
-                    height: 100%;
-                }
+                width: 50%;
             }
         }
     }
@@ -57,9 +54,9 @@
 
         .mecanica-section__imagen{
             @extend .historia-section__imagen;
-            height: 168px;
             div{
                 margin: 10px;
+                width: 50%;
             }
         }
     }

@@ -8518,23 +8518,20 @@ body {
     padding: 0 12px;
     width: 100%; }
   .main .historia-section .historia-section__imagen, .main .mecanica-section .historia-section__imagen, .main .mecanica-section .mecanica-section__imagen {
-    width: 100%;
+    width: 66%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    height: 176px;
-    overflow: hidden;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    overflow: hidden; }
     .main .historia-section .historia-section__imagen div, .main .mecanica-section .historia-section__imagen div, .main .mecanica-section .mecanica-section__imagen div {
-      margin: 10px; }
-      .main .historia-section .historia-section__imagen div img, .main .mecanica-section .historia-section__imagen div img, .main .mecanica-section .mecanica-section__imagen div img {
-        height: 100%; }
+      margin: 10px;
+      width: 50%; }
 
-.main .mecanica-section .mecanica-section__imagen {
-  height: 168px; }
-  .main .mecanica-section .mecanica-section__imagen div {
-    margin: 10px; }
+.main .mecanica-section .mecanica-section__imagen div {
+  margin: 10px;
+  width: 50%; }
 
 .main {
   /* Dando la misma altura de las imagenes */ }
